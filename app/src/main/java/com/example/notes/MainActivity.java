@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                                 SharedPreferences sharedPreferences=getApplicationContext().getSharedPreferences("com.example.notes", Context.MODE_PRIVATE);
                                 HashSet<String> hashSet=new HashSet<String>(MainActivity.arrayList);
                                 sharedPreferences.edit().putStringSet("notes",hashSet).apply();
+                                Toast.makeText(MainActivity.this, "Deleted successfully!", Toast.LENGTH_SHORT).show();
                             }
                         }
                 ).setNegativeButton("no",null).show();
